@@ -6,7 +6,6 @@ namespace SmartCity.Entities.Concrete
     {
         public CarPark()
         {
-            this.Company = new Company();
         }
         public int CarParkId { get; set; }
         public int? CarParkMax { get; set; }
@@ -16,7 +15,6 @@ namespace SmartCity.Entities.Concrete
         public int? CarParkNull { get; set; }
         public int? CompanyId { get; set; }
         public Boolean CarParkMarket { get; set; }
-        public virtual Company Company { get; set; }
         public virtual ICollection<Reservation> Reservations { get; set; }
     }
 }

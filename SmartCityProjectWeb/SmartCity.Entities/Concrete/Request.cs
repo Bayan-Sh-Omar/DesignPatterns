@@ -11,7 +11,6 @@ namespace SmartCity.Entities.Concrete
         public int? MedicineId { get; set; }
         public int? UserId { get; set; }
 
-        public virtual Medicine Medicine { get; set; }
         public virtual User User { get; set; }
     }
 }

@@ -11,9 +11,7 @@ namespace SmartCity.DataAccess.Concrete.EntityFramework
         public DbSet<User> Users { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<CarPark>()
-                .HasOne(a => a.Company)
-                .WithOne(b => b.CarPark);
+            modelBuilder.Entity<CarPark>();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

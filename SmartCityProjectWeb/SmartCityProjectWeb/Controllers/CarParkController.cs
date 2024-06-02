@@ -61,7 +61,7 @@ namespace SmartCityProjectWeb.Controllers
         public ActionResult CarParkGetList()
         {
             int userId = Convert.ToInt32(HttpContext.Session.GetString("UserId"));
-            List<CarPark> model = _carParkService.GetAll().Where(x => x.Company.UserId == userId).ToList();
+            List<CarPark> model = _carParkService.GetAll().Where(x => x.CarParkId == userId).ToList();
             return View(model);
         }
     }
